@@ -1,0 +1,42 @@
+[
+    {
+        "temperature": 82,
+        "voltage": 0.95
+    },
+    {
+        "temperature": 87,
+        "voltage": 0.85
+    },
+    {
+        "temperature": 80,
+        "voltage": 0.92
+    },
+    {
+        "temperature": 90,
+        "voltage": 0.88
+    },
+    {
+        "temperature": 75,
+        "voltage": 0.91
+    },
+    {
+        "temperature": 84,
+        "voltage": 0.89
+    },
+    {
+        "temperature": 86,
+        "voltage": 0.87
+    },
+    {
+        "temperature": 78,
+        "voltage": 0.93
+    },
+    {
+        "temperature": 83,
+        "voltage": 0.94
+    },
+    {
+        "temperature": 88,
+        "voltage": 0.86
+    }
+]

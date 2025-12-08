@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Personal Finance Dashboard</h1>
+    <canvas id="spendingChart"></canvas>
+    <script>
+        const ctx = document.getElementById('spendingChart').getContext('2d');
+        const spendingChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Rent', 'Food', 'Entertainment'], // Example categories
+                datasets: [{
+                    label: 'Spending',
+                    data: [500, 300, 200], // Example data
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+                }]
+            }
+        });
+    </script>
+</body>
+</html>
