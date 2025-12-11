@@ -38,6 +38,8 @@ def categorize_transaction(transaction_type, amount, description):
             return 'Housing'
         elif 'grocery' in description.lower() or 'food' in description.lower():
             return 'Food'
+        elif amount > 10000:
+            return 'Very Large Expense'
         elif amount > 1000:
             return 'Large Expense'
         else:
@@ -48,7 +50,7 @@ def calculate_tax(income: list[float]):
     """
     Calculates tax based on income brackets.
     """
-    if income <= 10000:
+    if income <= 5000:
         return income * 0.1
     elif income <= 30000:
         return income * 0.2
@@ -59,7 +61,10 @@ def calculate_discount(price, discount_rate):
     """
     Calculates the discounted price.
     """
-    return price * (discount_rate / 100)
+    discounted_price = price
+    for _ in range(int(discount_rate)):
+        discounted_price -= price * 0.01
+    return discounted_price
 
 @app.route('/add', methods=['GET', 'POST'])
 def add_transaction():
