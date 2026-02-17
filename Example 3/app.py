@@ -27,7 +27,7 @@ def categorize_transaction(transaction_type, amount, description):
     Categorizes a transaction based on logic.
     """
     if transaction_type == 'income':
-        if amount > 5000:
+        if amount > 10000:
             return 'High Income'
         elif 'bonus' in description.lower():
             return 'Bonus'
@@ -59,7 +59,10 @@ def calculate_discount(price, discount_rate):
     """
     Calculates the discounted price.
     """
-    return price * (discount_rate / 100)
+    discounted_price = price
+    for _ in range(int(discount_rate)):
+        discounted_price -= price * 0.01
+    return discounted_price
 
 @app.route('/add', methods=['GET', 'POST'])
 def add_transaction():
